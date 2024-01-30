@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Menu 2_1
+{% endblock %}
+
+
+{% block content %}
+<h1 class="text-center">Les 5 et 10 km du Port Boinot</h1>
+<h3 class="text-center mt-5 mx-5">Les informations</h3>
+
+<div class="container-fluid col-md-7 col-12 text-center">
+        <table class="table">
+            <tbody>
+                <tr>
+                    <td>Commune</td>
+                    <td>Niort - Port Boinot</td>
+                </tr>
+                <tr>
+                    <td>Date et horaire</td>
+                    <td>Samedi 28 septembre 2024 - 16h</td>
+                </tr>
+                <tr>
+                    <td>Distances</td>
+                    <td>5 et 10km</td>
+                </tr>
+                <tr>
+                    <td>Type de course</td>
+                    <td>route</td>
+                </tr>
+                <tr>
+                    <td>Site</td>
+                    <td><a href="https://ancpvr.blog4ever.com/">Niort Endurance 79</a></td>
+                </tr>
+                <tr>
+                    <td>Contact</td>
+                    <td><a href="mailto:vergne.fabienlvv@gmail.com">VERGNE Fabien</a> - 06 41 27 61 70</td>
+                </tr>
+                <tr>
+                    <td>Inscription</td>
+                    <td><a href="{{ url_for('views.menu_2_3') }}">Suivez le guide</a></td>
+                </tr>
+                <tr>
+                    <td>Résultats</td>
+                    <td>2023 et 2022</td>
+                </tr>
+                <tr>
+                    <td>Photos</td>
+                    <td>Les photos de <a href="https://www.facebook.com/media/set/?vanity=michel.hartmann.100&set=a.2583730288446638">Michel Hartmann</a> et de <a href="https://www.flickr.com/photos/134974308@N08/albums/72177720311598957/">Dominique Gavard</a></td>
+                </tr>
+            </tbody>
+        </table>
+</div>
+
+{% endblock %}

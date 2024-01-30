@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Menu 1_6
+{% endblock %}
+
+
+{% block content %}
+<h1 class="text-center">S'inscrire</h1>
+
+<div class="container-fluid">
+    <div class="text-center">
+        <a href="{{ url_for('static', filename='images/Inscription NE79.jpg') }}" download>
+            <img src="{{ url_for('static', filename='images/Inscription NE79.jpg') }}" class="card-img-top custom-image" alt="...">
+        </a>
+    </div>
+</div>
+<h3 class="text-center">Cliquez sur l'image pour la télécharger</h3>
+
+
+<style>
+    .custom-image {
+        max-height: 750px;
+        /* Ajustez la hauteur maximale selon vos besoins */
+        max-width: 100%;
+        height: auto;
+        /* Permettre à la hauteur de s'ajuster automatiquement */
+        width: auto;
+        margin: 0 auto;
+        /* Centrer l'image horizontalement */
+    }
+
+</style>
+
+{% endblock %}
