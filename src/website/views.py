@@ -15,3 +15,11 @@ def menu_1():
 def menu_2():
     return render_template('menu_2.html')
 
+@views.route('/menu-3')
+def menu_3():
+    return render_template('menu_3.html')
+
+@views.route('/menu-4')
+def menu_4():
+    return render_template('menu_4.html')
+
