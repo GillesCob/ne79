@@ -1,11 +1,125 @@
 {% extends 'base.html' %}
 
 {% block title %}
-    Home
+NE 79
 {% endblock %}
 
 
 {% block content %}
-<h1 class="text-center">Home Page</h1>
+<div class="container-fluid p-5 ">
+    <div class="row mt-5 gx-1">
+        <!-- Image à gauche -->
+        <div class="col-md-4 text-center">
+            <img src="{{ url_for('static', filename='images/Logo.jpeg') }}" class="shoes" alt="...">
+        </div>
+        <!-- Texte à droite -->
+        <div class="col-md-8 text-center">
+            <div class="d-flex align-items-center justify-content-center h-100">
+                <div class="p-3 ">
+                    <h2 class="title_home_page">
+                        Bienvenue sur le site de NIORT ENDURANCE 79
+                    </h2>
+                    <h3 class="small_title_home_page">
+                        Club affilié FFA: 079034
+                    </h3>
+                    <p class="mt-5 text_home_page">
+                        Un grand merci à tous les participants, les bénévoles, nos partenaires, à notre fidèle speaker
+                        Michel Dessaint, à Run Chrono, à Jordan Photographie, qui ont contribué à la réussite de cette
+                        2ème édition. Les sourires et le soleil étaient au rendez-vous Rigolant
+                        Et on vous dit : A l'année prochaine !
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Ajout de l'élément SVG -->
+<div class="all_svg">
+    <svg xmlns="http://www.w3.org/2000/svg" width="860" height="100.836" viewBox="0 0 3200 476" fill="none" style="width: 100%; height: auto;">
+        <g transform="rotate(13.093 545.326 321.836)" filter="url(#filter0_f_5_29)">
+            <path d="M588.741 267.071C563.29 376.507 451.075 451.437 330.512 423.398C209.95 395.358 2.9634 378.426 28.4151 268.99C53.8668 159.553 272.138 83.2429 392.701 111.282C486.473 157.133 614.193 157.634 588.741 267.071Z" fill="rgba(255, 255, 255, 0.09)"/>
+        </g>
+        <defs>
+            <filter id="filter0_f_5_29" x="-78.7306" y="0.445663" width="775.76" height="533.864" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+                <feGaussianBlur stdDeviation="52.5" result="effect1_foregroundBlur_5_29"/>
+            </filter>
+        </defs>
+    </svg>
+</div>
+<!-- Fin de l'élément SVG -->
+
+
+
+<style>
+    body {
+        position: relative;
+    }
+
+    body::after {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url("{{ url_for('static', filename='images/Photo1.jpg') }}");
+        background-size: cover; /* Pour que l'image prenne toute la place de l'écran */
+        background-repeat: no-repeat;
+        background-position: center;
+        opacity: 0.5; /* Réglez l'opacité selon vos préférences */
+        z-index: -1; /* Assurez-vous que cet élément est en arrière-plan */
+    }
+
+
+    .shoes {
+        max-height: 400px;
+        /* Ajustez la hauteur maximale selon vos besoins */
+        max-width: 100%;
+        height: auto;
+        /* Permettre à la hauteur de s'ajuster automatiquement */
+        width: auto;
+        margin: 20px auto;
+        /* Centrer l'image horizontalement */
+        
+    }
+
+    .title_home_page{
+        border-radius: 15%;
+        color: white;
+        font-size: 2rem;
+        font-weight: bold;
+    }
+
+    .small_title_home_page{
+        border-radius: 15%;
+        color: white;
+        font-size: 1.7rem;
+        font-weight: bold;
+    }
+
+
+    .text_home_page{
+        border-radius: 3%;
+        color: white;
+        font-size: 1.3rem;
+        font-weight: bold;
+    }
+
+
+    /* Réduire la taille du texte sur les petits écrans */
+    @media (max-width: 768px) {
+        .col-md-6 {
+            width: 100%;
+        }
+    }
+
+    .all_svg{
+        transform: translateY(-250px);
+    }
+
+</style>
 
 {% endblock %}
