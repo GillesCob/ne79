@@ -10,7 +10,7 @@ NE 79
     <div class="row mt-5 gx-1">
         <!-- Image à gauche -->
         <div class="col-md-4 text-center">
-            <img src="{{ url_for('static', filename='images/Logo.jpeg') }}" class="shoes" alt="...">
+            <img src="{{ url_for('static', filename='images/Logo.jpeg') }}" class="logo" alt="...">
         </div>
         <!-- Texte à droite -->
         <div class="col-md-8 text-center">
@@ -34,22 +34,6 @@ NE 79
     </div>
 </div>
 
-<!-- Ajout de l'élément SVG -->
-<div class="all_svg">
-    <svg xmlns="http://www.w3.org/2000/svg" width="860" height="100.836" viewBox="0 0 3200 476" fill="none" style="width: 100%; height: auto;">
-        <g transform="rotate(13.093 545.326 321.836)" filter="url(#filter0_f_5_29)">
-            <path d="M588.741 267.071C563.29 376.507 451.075 451.437 330.512 423.398C209.95 395.358 2.9634 378.426 28.4151 268.99C53.8668 159.553 272.138 83.2429 392.701 111.282C486.473 157.133 614.193 157.634 588.741 267.071Z" fill="rgba(255, 255, 255, 0.09)"/>
-        </g>
-        <defs>
-            <filter id="filter0_f_5_29" x="-78.7306" y="0.445663" width="775.76" height="533.864" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-                <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
-                <feGaussianBlur stdDeviation="52.5" result="effect1_foregroundBlur_5_29"/>
-            </filter>
-        </defs>
-    </svg>
-</div>
-<!-- Fin de l'élément SVG -->
 
 
 
@@ -71,10 +55,11 @@ NE 79
         background-position: center;
         opacity: 0.5; /* Réglez l'opacité selon vos préférences */
         z-index: -1; /* Assurez-vous que cet élément est en arrière-plan */
+        filter: blur(3px);
     }
 
 
-    .shoes {
+    .logo {
         max-height: 400px;
         /* Ajustez la hauteur maximale selon vos besoins */
         max-width: 100%;
@@ -83,7 +68,6 @@ NE 79
         width: auto;
         margin: 20px auto;
         /* Centrer l'image horizontalement */
-        
     }
 
     .title_home_page{
@@ -109,16 +93,7 @@ NE 79
     }
 
 
-    /* Réduire la taille du texte sur les petits écrans */
-    @media (max-width: 768px) {
-        .col-md-6 {
-            width: 100%;
-        }
-    }
 
-    .all_svg{
-        transform: translateY(-250px);
-    }
 
 </style>
 

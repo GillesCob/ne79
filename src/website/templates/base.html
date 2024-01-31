@@ -45,7 +45,7 @@
                             data-bs-toggle="dropdown" aria-expanded="false" style="color: white;">
                             Le club
                         </a>
-                        <ul class="dropdown-menu">
+                        <ul class="dropdown-menu menu_deroulant">
                             <li><a class="dropdown-item" href="{{url_for('views.menu_1_1')}}">Les membres</a></li>
                             <li><a class="dropdown-item" href="{{url_for('views.menu_1_2')}}">Le bureau</a></li>
                             <li><a class="dropdown-item" href="{{url_for('views.menu_1_3')}}">Les commissions</a></li>
@@ -61,7 +61,7 @@
                             data-bs-toggle="dropdown" aria-expanded="false" style="color: white;">
                             Notre course
                         </a>
-                        <ul class="dropdown-menu">
+                        <ul class="dropdown-menu menu_deroulant">
                             <li><a class="dropdown-item" href="{{url_for('views.menu_2_1')}}">Infos</a></li>
                             <li><a class="dropdown-item" href="{{url_for('views.menu_2_2')}}">Le règlement</a></li>
                             <li><a class="dropdown-item" href="{{url_for('views.menu_2_3')}}">S'inscrire</a></li>
@@ -85,12 +85,21 @@
 
 
     <!--Body content-->
+<div class = "content">
     {% block content %}
     {% endblock %}
+</div>
 
 
-    <!--Footer-->
-    <!--A ajouter-->
+<!------------Footer-------------->
+<footer class="footer mt-10px py-3">
+    <div class="container text-center">
+        <span class="footer_text">
+            NIORT ENDURANCE 79 © 2023. - <a href="mailto:adresse@email.com">CONTACT</a>
+        </span>
+    </div>
+</footer>
+<!------------Fin Footer-------------->
 
 
     <!--Bootstrap-->
@@ -106,6 +115,34 @@
         background-color: #121212;
         color: white;
     }
+
+    .content {
+    min-height: calc(100vh - 122px); /* Ajustez 70px en fonction de la hauteur de votre footer */
+    /* Ajoutez d'autres styles de mise en page au besoin */
+    }
+
+    .footer{
+        background-color: rgba(0, 0, 0, 0.289);
+    }
+
+    .footer_text{
+        color: azure;
+    }
+
+    .footer_text a {
+    color: inherit; /* Utiliser la couleur de texte héritée */
+    text-decoration: none; /* Supprimer le soulignement du lien */
+    }
+
+    .menu_deroulant{
+        background-color: rgba(16, 16, 16, 0.7);
+
+    }
+
+    .dropdown-item{
+        color: aliceblue;
+    }
+
 </style>
 
 </html>

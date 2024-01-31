@@ -10,10 +10,11 @@ NE 79
 <h3 class="text-center mt-5 mx-5">Les informations</h3>
 
 <div class="container-fluid col-md-7 col-12 text-center">
-        <table class="table">
+    <img src="{{ url_for('static', filename='images/port-boinot-2023.png') }}" class="mb-4 affiche" alt="...">
+        <table class="table border border-4 border-dark mt-4 custom-table">
             <tbody>
                 <tr>
-                    <td>Commune</td>
+                    <td>Commune test</td>
                     <td>Niort - Port Boinot</td>
                 </tr>
                 <tr>
@@ -51,5 +52,46 @@ NE 79
             </tbody>
         </table>
 </div>
+
+
+<style>
+    body {
+      position: relative;
+    }
+  
+    body::after {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url("{{ url_for('static', filename='images/Photo3.jpg') }}");
+      background-size: cover;
+      /* Pour que l'image prenne toute la place de l'écran */
+      background-repeat: no-repeat;
+      background-position: center;
+      opacity: 0.5;/* Réglez l'opacité selon vos préférences */
+      z-index: -1; /* Assurez-vous que cet élément est en arrière-plan */
+      filter: blur(1px);
+    }
+
+    .affiche{
+        max-width: 500px;
+    }
+
+
+    .custom-table td{
+        background-color: rgba(169, 169, 179, 0.7);
+        color: rgb(0, 0, 0);
+    }
+
+    .custom-table td a{
+        color: rgb(0, 0, 0);
+    }
+
+
+
+</style>
 
 {% endblock %}
